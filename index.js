@@ -10,9 +10,11 @@ app.use(express.json());
 
 // * routes 
 const authRoute = require('./routes/auth');
+const postRoute = require('./routes/posts');
 
 // * middleware for routes
 app.use('/api/user', authRoute);
+app.use('/api/posts', postRoute);
 
 
 app.get('/', (req, res) => {
